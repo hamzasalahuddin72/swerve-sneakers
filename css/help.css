@@ -1,0 +1,91 @@
+.section {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 70px;
+    box-sizing: border-box;
+}
+
+#faqs {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 20px;
+}
+
+.help-a {
+    cursor: pointer;
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: solid red 1px;
+}
+
+.help-a {
+    color: black;
+    text-decoration: none;
+}
+
+.help-a:hover {
+    text-decoration: underline;
+    border: dashed red 1px;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px;
+    margin-top: 40px;
+}
+
+#how-it-works-title {
+    font-size: 50px;
+}
+
+#how-it-works {
+    border-left: solid 300px red;
+    border-right: solid 300px red;
+}
+
+#faq-title {
+    text-decoration: underline;
+}
+
+p {
+    line-height: 40px;
+    text-align: justify;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-bottom: dashed 1px red;
+}
+
+@media (max-width: 1080px) {
+    #how-it-works {
+        border-left: solid 150px red;
+        border-right: solid 150px red;
+    }
+}
+
+@media (max-width: 736px) {
+    #how-it-works {
+        border-left: 0px;
+        border-right: 0px;
+    }
+}
+
+@media (max-width: 400px) {
+    #how-it-works {
+        border-left: solid 10px red;
+        border-right: solid 10px red;
+    }
+    
+    #faqs {
+        grid-template-columns: 100%;
+    }
+
+    p {
+        font-size: small;
+        line-height: 30px;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}

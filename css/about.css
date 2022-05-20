@@ -1,0 +1,127 @@
+.section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 70px;
+}
+
+.contact-icons a {
+    color: black;
+    text-decoration: none;
+}
+
+.div {
+    cursor: default;
+    display: flex;
+    flex-direction: row;
+    background-color: red;
+    width: 800px;
+    text-align: center;
+    font-size: 20px;
+    margin: 20px;
+    transition: all 0.3s;
+    box-shadow: 0px 20px 20px rgba(128, 128, 128, 0.3);
+}
+
+.div:hover {
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -o-transform: scale(1.02);
+}
+
+.sub-div {
+    padding: 20px;
+}
+
+.sub-div p {
+    font-size: 15px;
+}
+
+.profile-info {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+#profile-pic {
+    width: auto;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.about-self {
+    text-align: justify;
+    font-size: 16px;
+    padding: 20px;
+    line-height: 30px;
+    width: auto;
+    box-shadow: -4px 0px 10px 1px rgba(128, 128, 128, 0.3);
+}
+
+@media screen and (max-width: 720px) {
+    .div {
+        flex-direction: column;
+    }
+    
+    .profile-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #profile-pic {
+        width: 200px;
+        height: 100%;
+        margin-bottom: 0px;
+    }
+
+    .sub-div {
+        margin: auto;
+        width: 100%;
+    }
+    
+    .div:hover {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+}
+}
+
+@media screen and (max-width: 360px) {
+    .div {
+        flex-direction: column;
+        margin: 0px;
+    }
+    
+    .profile-info {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #profile-pic {
+        width: 150px;
+        height: 100%;
+        margin: 0px;
+    }
+
+    .sub-div {
+        font-size: smaller;
+        margin: auto;
+        width: auto;
+    }
+
+    .sub-div p {
+        font-size: 10px;
+    }
+
+    .about-self {
+        font-size: small;
+        line-height: 20px;
+    }
+}

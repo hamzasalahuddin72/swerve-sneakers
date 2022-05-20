@@ -1,0 +1,505 @@
+@font-face {
+    font-family: custom;
+    src: url('font/custom.otf');
+}
+
+@font-face {
+    font-family: custom-main;
+    src: url('font/new_comic_title/newcomictitle.ttf');
+}
+/*font ---- Dassault3DItalic-7dWP*/
+
+html {
+    font-family: custom-main;
+    background-image: url(misc/bg.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100%;
+    display: inline-block;
+    overflow-y: scroll;
+    letter-spacing: 2px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 10px;
+    border: solid black 5px;
+    -webkit-border-radius: black;
+    -moz-border-radius: black;
+    -ms-border-radius: black;
+    -o-border-radius: black;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: red;
+}
+
+body {
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+
+header {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    font-size: 50px;
+    z-index: 100;
+    top: 0;
+    box-shadow: 0px 20px 20px rgba(128, 128, 128, 0.3);
+}
+
+.scroll-indicator {
+    position: fixed;
+    margin-top: 70px;
+    margin: 0px;
+    background-color: red;
+    display: none;
+    height: 4px;
+}
+
+.top-sect {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    font-size: 50px;
+    text-align: left;
+    z-index: 100;
+    top: 0;
+}
+
+.middle {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.logo {
+    margin-left: 90px;
+    margin-right: 30px;
+    font-family: custom;
+    width: auto;
+    height: 70px;
+    padding: 0px 10px;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+.navbtns {
+    margin: 0px;
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    z-index: 100;
+    text-align: center;
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+    height: 70px;
+    margin-right: 90px;
+    z-index: 100;
+}
+
+.navbtns-each {
+    text-align: center;
+    padding: 0px 15px;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    -ms-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+}
+
+.navbtns-each:hover {
+    color: red;
+    background-color: white;
+}
+
+.logo a, .navbtns-each {
+    color: white;
+    text-decoration: none;
+    line-height: 70px;
+}
+
+i {
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+i:hover {
+    color: white;
+}
+
+.nav-expand, .nav-search, .nav-collapse, .collapse-navbtn {
+    font-family: custom-main;
+    cursor: pointer;
+    display: flex;
+    background-color: black;
+    border: 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    padding: 0px 10px;
+    transition: all 0.15s ease-in-out;
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    -ms-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+}
+
+.nav-expand {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.collapse-navbtn {
+    display: none;
+}
+
+.nav-expand:hover, .nav-search:hover, .nav-collapse:hover, .collapse-navbtn:hover {
+    background-color: red;
+}
+
+.close-btn {
+    background-color: transparent;
+    width: 90px;
+}
+
+button {
+    font-family: custom-main;
+    cursor: pointer;
+    background-color: black;
+    border: 0px;
+    font-size: 20px;
+    color: white;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+button:hover {
+    color: black;
+    background-color: white;
+}
+
+a:hover .icon {
+    filter: invert(0%);
+    -webkit-filter: invert(0%);
+}
+
+#lines {
+    height: 25px;
+}
+
+.nav-popup {
+    top: 0;
+    margin-top: 70px;
+    display: none;
+    width: auto;
+    height: 100%;
+    position: fixed;
+    z-index: 100;
+    background-color: transparent;
+    flex-direction: column;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+#popup-btn {
+    cursor: pointer;
+}
+
+.popup-content {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: black;
+    justify-content: space-between;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-right: solid red 1px;
+    border-top: solid red 2px;
+    box-shadow: 20px 20px 20px -20px gray;
+    transition: width 0.3s ease-in-out;
+    -webkit-transition: width 0.3s ease-in-out;
+    -moz-transition: width 0.3s ease-in-out;
+    -ms-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
+}
+
+.popup-content >* {
+    flex: 0 0 auto;
+}
+
+.popup-content .navbtns-each {
+    text-align: left;
+    font-size: 20px;
+    color: red;
+}
+
+.popup-content .navbtns-each:hover {
+    color: black;
+    background-color: white;
+}
+
+#eachCurrent {
+    cursor: default;
+    color: white;
+    border: solid red 1px;
+}
+
+#eachCurrent:hover {
+    color: white;
+    background-color: black;
+}
+
+.search-btn-field {
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-search {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+/* #search-input */
+#search-input {
+    text-align: left;
+    font-size: 20px;
+    outline: none;
+    display: none;
+    padding: 20px;
+    border: 0px;
+    height: auto;
+    width: 100%;
+    margin-right: 90px;
+    z-index: 100;
+}
+
+@media screen and (max-width: 1211px) {
+    .collapse-navbtn {
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: flex;
+        margin-right: 90px;
+        z-index: 100;
+    }
+
+    .nav-links {
+        margin-right: 180px;
+        justify-content: end;
+    }
+
+}
+
+@media screen and (max-width: 731.2px) {
+    html {
+        background-image: url(misc/bg-portrait.png);
+    }
+
+    .collapse-navbtn {
+        margin-top: 70px;
+        margin-right: 0px;
+    }
+
+    .logo {
+        margin: auto;
+    }
+
+    .middle {
+        z-index: -100;
+    }
+
+    .section {
+        margin-top: 140px;
+    }
+
+    .navbtns {
+        position: fixed;
+        top: 0;
+        margin-top: 70px;
+        box-shadow: 0px 20px 20px rgba(128, 128, 128, 0.3);
+        z-index: -100;
+    }
+
+    .nav-links {
+        justify-content: start;
+        width: 100%;
+        margin: auto;
+    }
+
+    .nav-links .navbtns-each {
+        width: 100%;
+    }
+
+    .search-btn-field {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+    }
+
+    .popup-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: none;
+        justify-content: start;
+    }
+
+    .nav-popup {
+        width: 100%;
+    }
+
+    .popup-content .navbtns-each {
+        line-height: 15px;
+        height: auto;
+        padding: 15px;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .scroll-indicator {
+        margin-top: 140px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .logo {
+        margin: 0px auto;
+        height: 50%;
+        font-size: 35px;
+        padding-right: 20px;
+    }
+
+    .nav-expand, .nav-search, .nav-collapse, .collapse-navbtn {
+        height: 70px;
+        width: 40px;
+    }
+
+    #search-input {
+        margin-right: 60px;
+    }
+
+}
+
+@media screen and (max-width: 280px) {
+    .logo {
+        font-size: 25px;
+    }
+}
+
+footer {
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    z-index: 100;
+    position: absolute;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    transition: all 0.15s ease-in-out;
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    -ms-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+}
+
+footer a:hover {
+    background-color: white;
+    color: red;
+}
+
+.fa-bars {
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+.action-buttons {
+    font-family: custom-main;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 15px;
+    background-color: black;
+    border: 0px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+.action-buttons:hover {
+    color: black;
+    background-color: white;
+}
