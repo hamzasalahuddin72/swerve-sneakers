@@ -1,0 +1,272 @@
+Array
+(
+    [count] => 60716
+    [results] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 31058c20-8d08-43d4-84ad-69d8c5f666cb
+                    [brand] => Converse
+                    [colorway] => White/Black
+                    [gender] => men
+                    [name] => Pokemon Poke Ball
+                    [releaseDate] => 2022-12-07
+                    [retailPrice] => 70
+                    [shoe] => Converse Chuck Taylor All-Star
+                    [styleId] => A01651C
+                    [title] => Converse Chuck Taylor All-Star Pokemon Poke Ball
+                    [year] => 2022
+                    [media] => Array
+                        (
+                            [imageUrl] => https://images.stockx.com/images/Converse-Chuck-Taylor-All-Star-Pokemon-Poke-Ball-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1650653647
+                            [smallImageUrl] => https://images.stockx.com/images/Converse-Chuck-Taylor-All-Star-Pokemon-Poke-Ball-Product.jpg?fit=fill&bg=FFFFFF&w=300&h=214&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1650653647
+                            [thumbUrl] => https://images.stockx.com/images/Converse-Chuck-Taylor-All-Star-Pokemon-Poke-Ball-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=100&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1650653647
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [id] => e5352103-71dc-4b8a-bdca-b561aa924143
+                    [brand] => Jordan
+                    [colorway] => White/Worn Blue-Metallic Gold
+                    [gender] => women
+                    [name] => Denim (W)
+                    [releaseDate] => 2022-09-23
+                    [retailPrice] => 170
+                    [shoe] => Jordan 1 High OG
+                    [styleId] => DM9036-104
+                    [title] => Jordan 1 High OG Denim (W)
+                    [year] => 2022
+                    [media] => Array
+                        (
+                            [imageUrl] => https://images.stockx.com/images/Air-Jordan-1-High-OG-Denim-W.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1649445189
+                            [smallImageUrl] => https://images.stockx.com/images/Air-Jordan-1-High-OG-Denim-W.jpg?fit=fill&bg=FFFFFF&w=300&h=214&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1649445189
+                            [thumbUrl] => https://images.stockx.com/images/Air-Jordan-1-High-OG-Denim-W.jpg?fit=fill&bg=FFFFFF&w=140&h=100&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1649445189
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [id] => 848e3030-b423-4996-931f-f94c7f40a7cd
+                    [brand] => adidas
+                    [colorway] => Focus Orange/Cloud White/Gum
+                    [gender] => men
+                    [name] => Focus Orange
+                    [releaseDate] => 2022-09-01
+                    [retailPrice] => 85
+                    [shoe] => adidas Busenitz Vintage
+                    [styleId] => H03347
+                    [title] => adidas Busenitz Vintage Focus Orange
+                    [year] => 2022
+                    [media] => Array
+                        (
+                            [imageUrl] => https://images.stockx.com/images/adidas-Busenitz-Vintage-Focus-Orange-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1652209460
+                            [smallImageUrl] => https://images.stockx.com/images/adidas-Busenitz-Vintage-Focus-Orange-Product.jpg?fit=fill&bg=FFFFFF&w=300&h=214&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1652209460
+                            [thumbUrl] => https://images.stockx.com/images/adidas-Busenitz-Vintage-Focus-Orange-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=100&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1652209460
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [id] => 135b8dc3-eb71-4002-84da-0cefc6f0a7fb
+                    [brand] => Jordan
+                    [colorway] => Sail/Orange
+                    [gender] => men
+                    [name] => Maison Chateau Rouge
+                    [releaseDate] => 2022-06-24
+                    [retailPrice] => 200
+                    [shoe] => Jordan 2 Retro
+                    [styleId] => DO5254-180
+                    [title] => Jordan 2 Retro Maison Chateau Rouge
+                    [year] => 2022
+                    [media] => Array
+                        (
+                            [imageUrl] => https://images.stockx.com/images/Air-Jordan-2-Retro-Maison-Chateau-Rouge.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1651194956
+                            [smallImageUrl] => https://images.stockx.com/images/Air-Jordan-2-Retro-Maison-Chateau-Rouge.jpg?fit=fill&bg=FFFFFF&w=300&h=214&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1651194956
+                            [thumbUrl] => https://images.stockx.com/images/Air-Jordan-2-Retro-Maison-Chateau-Rouge.jpg?fit=fill&bg=FFFFFF&w=140&h=100&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1651194956
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [id] => 6672f081-b5c6-4901-9611-789e6d7a25c1
+                    [brand] => Jordan
+                    [colorway] => Black/White/Amethyst Wave/Bleached Coral
+                    [gender] => child
+                    [name] => Zen Master (GS)
+                    [releaseDate] => 2022-06-23
+                    [retailPrice] => 110
+                    [shoe] => Jordan 1 Mid SE
+                    [styleId] => DM6216-001
+                    [title] => Jordan 1 Mid SE Zen Master (GS)
+                    [year] => 2022
+                    [media] => Array
+                        (
+                            [imageUrl] => https://images.stockx.com/images/Air-Jordan-1-Mid-SE-Zen-Master-GS-1.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1651597906
+                            [smallImageUrl] => https://images.stockx.com/images/Air-Jordan-1-Mid-SE-Zen-Master-GS-1.jpg?fit=fill&bg=FFFFFF&w=300&h=214&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1651597906
+                            [thumbUrl] => https://images.stockx.com/images/Air-Jordan-1-Mid-SE-Zen-Master-GS-1.jpg?fit=fill&bg=FFFFFF&w=140&h=100&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1651597906
+                        )
+
+                )
+
+            [5] => Array
+                (
+                    [id] => 8477d411-64b7-48ba-919c-463a15e4a66e
+                    [brand] => Jordan
+                    [colorway] => Black/White/Amethyst Wave/Bleached Coral
+                    [gender] => toddler
+                    [name] => Zen Master (TD)
+                    [releaseDate] => 2022-06-23
+                    [retailPrice] => 65
+                    [shoe] => Jordan 1 Mid SE
+                    [styleId] => DM6217-001
+                    [title] => Jordan 1 Mid SE Zen Master (TD)
+                    [year] => 2022
+                    [media] => Array
+                        (
+                            [imageUrl] => https://images.stockx.com/images/Air-Jordan-1-Mid-SE-Zen-Master-TD.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1651079062
+                            [smallImageUrl] => https://images.stockx.com/images/Air-Jordan-1-Mid-SE-Zen-Master-TD.jpg?fit=fill&bg=FFFFFF&w=300&h=214&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1651079062
+                            [thumbUrl] => https://images.stockx.com/images/Air-Jordan-1-Mid-SE-Zen-Master-TD.jpg?fit=fill&bg=FFFFFF&w=140&h=100&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1651079062
+                        )
+
+                )
+
+            [6] => Array
+                (
+                    [id] => f4aa41a4-fd9b-4491-9d83-1c9981473ee0
+                    [brand] => Jordan
+                    [colorway] => Black/Bleached Coral-White
+                    [gender] => men
+                    [name] => Zen Master
+                    [releaseDate] => 2022-06-23
+                    [retailPrice] => 125
+                    [shoe] => Jordan 1 Mid SE
+                    [styleId] => DM1200-001
+                    [title] => Jordan 1 Mid SE Zen Master
+                    [year] => 2022
+                    [media] => Array
+                        (
+                            [imageUrl] => https://images.stockx.com/images/Air-Jordan-1-Mid-SE-Zen-Master.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1650326663
+                            [smallImageUrl] => https://images.stockx.com/images/Air-Jordan-1-Mid-SE-Zen-Master.jpg?fit=fill&bg=FFFFFF&w=300&h=214&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1650326663
+                            [thumbUrl] => https://images.stockx.com/images/Air-Jordan-1-Mid-SE-Zen-Master.jpg?fit=fill&bg=FFFFFF&w=140&h=100&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1650326663
+                        )
+
+                )
+
+            [7] => Array
+                (
+                    [id] => f939fb27-c941-47a6-99c8-caea025d5f2e
+                    [brand] => Jordan
+                    [colorway] => Black/White/Amethyst Wave/Bleached Coral
+                    [gender] => preschool
+                    [name] => Zen Master (PS)
+                    [releaseDate] => 2022-06-23
+                    [retailPrice] => 80
+                    [shoe] => Jordan 1 Mid SE
+                    [styleId] => DM6215-001
+                    [title] => Jordan 1 Mid SE Zen Master (PS)
+                    [year] => 2022
+                    [media] => Array
+                        (
+                            [imageUrl] => https://images.stockx.com/images/Air-Jordan-1-Mid-SE-Zen-Master-PS-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1650653169
+                            [smallImageUrl] => https://images.stockx.com/images/Air-Jordan-1-Mid-SE-Zen-Master-PS-Product.jpg?fit=fill&bg=FFFFFF&w=300&h=214&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1650653169
+                            [thumbUrl] => https://images.stockx.com/images/Air-Jordan-1-Mid-SE-Zen-Master-PS-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=100&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1650653169
+                        )
+
+                )
+
+            [8] => Array
+                (
+                    [id] => 59fe994d-1a9d-451f-85a5-079ffc7d1483
+                    [brand] => Jordan
+                    [colorway] => Summit White/Limelight
+                    [gender] => women
+                    [name] => Limelight (W)
+                    [releaseDate] => 2022-06-22
+                    [retailPrice] => 120
+                    [shoe] => Jordan 1 Low
+                    [styleId] => DH9619-103
+                    [title] => Jordan 1 Low Limelight (W)
+                    [year] => 2022
+                    [media] => Array
+                        (
+                            [imageUrl] => https://images.stockx.com/images/Air-Jordan-1-Low-Limelight-W-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1622046613
+                            [smallImageUrl] => https://images.stockx.com/images/Air-Jordan-1-Low-Limelight-W-Product.jpg?fit=fill&bg=FFFFFF&w=300&h=214&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1622046613
+                            [thumbUrl] => https://images.stockx.com/images/Air-Jordan-1-Low-Limelight-W-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=100&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1622046613
+                        )
+
+                )
+
+            [9] => Array
+                (
+                    [id] => 885e8fdb-1360-496d-804d-4e2bcdc3c18b
+                    [brand] => Jordan
+                    [colorway] => White/University Red-Black
+                    [gender] => men
+                    [name] => Red Oreo
+                    [releaseDate] => 2022-06-04
+                    [retailPrice] => 200
+                    [shoe] => Jordan 6 Retro
+                    [styleId] => CT8529-162
+                    [title] => Jordan 6 Retro Red Oreo
+                    [year] => 2022
+                    [media] => Array
+                        (
+                            [imageUrl] => https://images.stockx.com/images/Air-Jordan-6-Retro-Red-Oreo.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1651243410
+                            [smallImageUrl] => https://images.stockx.com/images/Air-Jordan-6-Retro-Red-Oreo.jpg?fit=fill&bg=FFFFFF&w=300&h=214&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1651243410
+                            [thumbUrl] => https://images.stockx.com/images/Air-Jordan-6-Retro-Red-Oreo.jpg?fit=fill&bg=FFFFFF&w=140&h=100&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1651243410
+                        )
+
+                )
+
+            [10] => Array
+                (
+                    [id] => 8eaf1af5-672a-4d39-8bf8-1f80ca1d714a
+                    [brand] => Nike
+                    [colorway] => Baroque Brown/Lemon Drop-Wheat-Chile Red
+                    [gender] => men
+                    [name] => Travis Scott Cactus Jack Baroque Brown
+                    [releaseDate] => 2022-06-04
+                    [retailPrice] => 160
+                    [shoe] => Nike Air Max 1
+                    [styleId] => DO9392-200
+                    [title] => Nike Air Max 1 Travis Scott Cactus Jack Baroque Brown
+                    [year] => 2022
+                    [media] => Array
+                        (
+                            [imageUrl] => https://images.stockx.com/images/Nike-Air-Max-1-Travis-Scott-Baroque-Brown-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1645116120
+                            [smallImageUrl] => https://images.stockx.com/images/Nike-Air-Max-1-Travis-Scott-Baroque-Brown-Product.jpg?fit=fill&bg=FFFFFF&w=300&h=214&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1645116120
+                            [thumbUrl] => https://images.stockx.com/images/Nike-Air-Max-1-Travis-Scott-Baroque-Brown-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=100&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1645116120
+                        )
+
+                )
+
+            [11] => Array
+                (
+                    [id] => c318bbcc-312a-4396-9252-698c203d1dea
+                    [brand] => Nike
+                    [colorway] => Wheat/Lemon Drop-Baroque Brown-Chile Red
+                    [gender] => men
+                    [name] => Travis Scott Cactus Jack Saturn Gold
+                    [releaseDate] => 2022-06-04
+                    [retailPrice] => 160
+                    [shoe] => Nike Air Max 1
+                    [styleId] => DO9392-700
+                    [title] => Nike Air Max 1 Travis Scott Cactus Jack Saturn Gold
+                    [year] => 2022
+                    [media] => Array
+                        (
+                            [imageUrl] => https://images.stockx.com/images/Nike-Air-Max-1-Travis-Scott-Wheat-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1648066078
+                            [smallImageUrl] => https://images.stockx.com/images/Nike-Air-Max-1-Travis-Scott-Wheat-Product.jpg?fit=fill&bg=FFFFFF&w=300&h=214&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1648066078
+                            [thumbUrl] => https://images.stockx.com/images/Nike-Air-Max-1-Travis-Scott-Wheat-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=100&fm=webp&auto=compress&trim=color&q=90&dpr=2&updated_at=1648066078
+                        )
+
+                )
+
+        )
+
+)
