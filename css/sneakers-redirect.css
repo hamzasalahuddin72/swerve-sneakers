@@ -1,0 +1,508 @@
+.section2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+    margin-top: 70px;
+}
+
+h1 {
+    margin: 0px;
+}
+
+h2, h3, h4, h5 {
+    line-height: 25px;
+    margin: auto;
+    margin-left: 0px;
+}
+
+.sneaker-info-container {
+    box-shadow: 0px 20px 20px rgba(128, 128, 128, 0.3);
+    display: block;
+    margin-top: 400px;
+    background-color: red;
+    width: auto;
+    padding: 20px;
+}
+
+.sneaker-everything {
+    width: 65%;
+    margin: auto;
+}
+
+.front-image {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    z-index: -100;
+    margin-top: 70px;
+    width: 100%;
+    height: 400px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sneaker-primary {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.d1 {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    padding-right: 20px;
+}
+
+.d2 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.sn {
+    margin-top: 5px;
+}
+
+.sneaker-brand, .sneaker-name , .sneaker-price, .sneaker-desc{
+    color: black;
+}
+
+.icon {
+    filter: invert(100%);
+    width: 20px;
+    height: 20px;
+    margin: auto 10px;
+    -webkit-filter: invert(100%);
+}
+
+button {
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding: 0px;
+    margin: 5px 0px;
+}
+
+.customer-review {
+    flex-direction: column;
+    background-color: red;
+    width: 100%;
+    height: auto;
+}
+
+.write-review-popup {
+    display: none;
+    flex-direction: column;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    z-index: 200;
+    width: 100%;
+    height: 100%;
+}
+
+#close-review-btn, #close-rental-btn {
+    position: fixed;
+    margin: 1px;
+    left: 0;
+    z-index: 100;
+    width: 70px;
+    height: 70px;
+    color: white;
+    background-color: black;
+    border: solid red 1px;
+    z-index: 110;
+}
+
+#close-review-btn:hover, #close-rental-btn:hover {
+    color: black;
+    background-color: white;
+    border: solid red 1px;
+}
+
+.sneaker-review {
+    width: 700px;
+    height: auto;
+    margin: auto;
+    background-color: white;
+    box-shadow: 0px 20px 20px rgba(128, 128, 128, 0.3);
+}
+
+.sneaker-quick-details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: auto;
+    flex: 1;
+}
+
+.sneaker-quick-details-rent {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: auto;
+    box-sizing: border-box;
+}
+
+.review-image {
+    display: flex;
+    flex-direction: column;
+    background-size: contain;
+    width: 100%;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0px;
+}
+
+.sub-div1 {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    border: solid red 1px;
+}
+
+.sub-div1-1 {
+    position: relative;
+    box-shadow: -4px 0px 10px 1px rgba(128, 128, 128, 0.3);
+    background-color: red;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 2;
+}
+
+form {
+    margin: 0px;
+}
+
+textarea {
+    padding: 10px;
+    resize: none;
+    outline: none;
+    border: none;
+    height: 200px;
+}
+
+.rating {
+    display: flex;
+    flex-direction: column;
+}
+
+.rating-type {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: black;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.rating-type img {
+    width: 30px;
+}
+
+label {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.form-input-error {
+    font-size: small;
+    text-align: left;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    color: white;
+    display: block;
+    height: auto;
+    border: solid white 1px;
+    background-color: black;
+}
+
+[type=radio] {
+    position: absolute;
+    opacity: 0;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    outline: none;
+}
+
+[type=radio]:hover +img {
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+}
+
+[type=radio] + img {
+    opacity: 1;
+    cursor: pointer;
+}
+
+[type=radio]:checked + img {
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+}
+
+.review-submit-confirmation {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.status-container {
+    font-size: large;
+    display: flex;
+    color: white;
+    margin: auto;
+    padding: 20px;
+    background-color: black;
+    border: solid red 1px;
+}
+
+@media screen and (max-width: 1024px) {
+    .sneaker-everything {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .front-image {
+        height: 270px;
+        margin-top: 140px;
+    }
+
+    .section2 {
+        margin-top: 140px;
+    }
+
+    .d1 {
+        padding-right: 0px;
+        padding-bottom: 20px;
+    }
+    
+    .sneaker-primary {
+        flex-direction: column;
+    }
+
+    .sneaker-everything {
+        width: 100%;
+    }
+
+    .sneaker-info-container {
+        margin-top: 260px;
+    }
+
+    /*REVIEW POPUP*/
+
+    .sneaker-review {
+        width: 100vw;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    
+    .sub-div1 {
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    .review-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .sneaker-quick-details {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 300px;
+        overflow-y: scroll;
+        box-sizing: border-box;
+    }
+
+    .sneaker-quick-details::-webkit-scrollbar {
+        background-color: transparent;
+    }
+    
+    .sneaker-quick-details-rent::-webkit-scrollbar {
+        background-color: transparent;
+    }
+
+    .sub-div1-1 {
+        margin-top: 300px;
+        height: auto;
+        z-index: 100;
+        padding-bottom: 70px;
+    }
+
+    #close-review-btn, #close-rental-btn {
+        font-size: 15px;
+        width: 40px;
+        height: auto;
+    }
+
+    #rent-container {
+        width: 100vw;
+        height: 100vh;
+    }
+    
+    .sneaker-quick-details-rent {
+        width: 100vw;
+        height: 300px;
+    }
+
+    .rent-sub-div1 {
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h2, h3, h4, h5 {
+        width: 100%;
+    }
+
+    .rating-type {
+        justify-content: space-between;
+    }
+
+    .sneaker-review::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+#shoeId {
+    display: none;
+}
+
+#rent-container {
+    display: none;
+    flex-direction: column;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    z-index: 200;
+    width: 100%;
+    height: 100%;
+}
+
+.sneaker-rent {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    height: auto;
+    margin: auto;
+    background-color: white;
+    box-shadow: 0px 20px 20px rgba(128, 128, 128, 0.3);
+}
+
+#day-count {
+    cursor: default;
+    width: auto;
+    flex: 1;
+    border: solid white 1px;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+.slider-title {
+    color: black;
+}
+
+#range-slider {
+    -webkit-appearance: none;
+    width: auto;
+    height: 10px;
+    flex: 2;
+    background: white;
+    outline: none;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    box-sizing: border-box;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+}
+
+#range-slider:hover {
+    background-color: white;
+    border: dashed red 1px;
+}
+
+#range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    border: solid white 2px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+#range-slider::-webkit-slider-thumb:hover {
+    border-color: red;
+}
+
+#range-slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #04AA6D;
+    border: solid white 2px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+#range-slider::-moz-range-thumb:hover {
+    border-color: red;
+}
+
+.rent-sub-div1 {
+    box-shadow: -4px 0px 10px 1px rgba(128, 128, 128, 0.3);
+    background-color: red;
+    padding: 20px;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.sub-div1-2 {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+    padding: 10px;
+    background-color: black;
+}
+
+#proceed-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}

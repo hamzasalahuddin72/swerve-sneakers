@@ -1,0 +1,126 @@
+a {
+    color: white;
+    text-decoration: none;
+}
+
+h1 {
+    font-family: custom;
+    cursor: default;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    margin-top: 70px;
+}
+
+.form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    padding: 20px;
+    width: 500px;
+    height: 100vh;
+    margin: auto;
+    box-shadow: 0px 20px 20px rgba(128, 128, 128, 0.3);
+}
+
+button {
+    width: 100%;
+    padding: 20px;
+    height: auto;
+    margin: 20px auto;
+}
+
+.form-element-group {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: auto;
+}
+
+.form-input {
+    outline: none;
+    border: 0px;
+    height: auto;
+    text-align: left;
+    font-size: 15px;
+    display: block;
+    width: 100%;
+    margin: 5px auto;
+    padding: 15px;
+    box-shadow: 2px 7px 5px rgba(128, 128, 128, 0.3) inset;
+}
+
+#top-error {
+    text-align: center;
+    position: relative;
+    color: white;
+    border: solid white 1px;
+    background-color: red;
+}
+
+.form-input-error {
+    font-size: small;
+    text-align: left;
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    color: white;
+    display: block;
+    height: auto;
+    border: solid red 1px;
+    background-color: black;
+}
+
+.form-help {
+    width: auto;
+    padding: 10px;
+    background-color: rgb(209, 61, 61);
+    text-align: left;
+    margin: 10px auto;
+}
+
+.form-help:hover {
+    cursor: pointer;
+    transition: all 0.3s;
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+#create-account-top {
+    text-decoration: underline;
+}
+
+#create-account-top:hover {
+    color: black;
+}
+/*
+.form-help-link:hover {
+    text-decoration: underline;
+}*/
+
+@media screen and (max-width: 720px) {
+    .form {
+        width: auto;
+        height: auto;
+        margin: 0px;
+        padding-top: 30px;
+        padding-bottom: 60px;
+    }
+    
+    button {
+        margin: 30px auto;
+    }
+}
