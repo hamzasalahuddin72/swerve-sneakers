@@ -1,16 +1,14 @@
 <?php
 ob_start();
-$dbusername = "hs902_hamzasalahuddin";
-$dbpassword = "j1Wsm]JYw*nB";
 
-$accountType = $_POST["account"];
-$firstname = $_POST["firstname"];
-$lastname = $_POST["lastname"];
-$username = $_POST["username"];
-$gender = $_POST["gender"];
-$email = $_POST["email"];
-$password = $_POST["password"];
-$confirmPassword = $_POST["confirmPassword"];
+$accountType = trim($_POST["account"] ?? "");
+$firstname = trim($_POST["firstname"] ?? "");
+$lastname = trim($_POST["lastname"] ?? "");
+$username = trim($_POST["username"] ?? "");
+$gender = trim($_POST["gender"] ?? "");
+$email = trim($_POST["email"] ?? "");
+$password = $_POST["password"] ?? "";
+$confirmPassword = $_POST["confirmPassword"] ?? "";
 
 $accountTypeEmpty = "Please select an account type";
 $firstnameEmpty = "Please enter a first name";
@@ -31,71 +29,47 @@ $confirmPasswordEmpty = "Please confirm the password";
 $confirmPasswordNo = "Passwords do not match";
 
 $conn = new mysqli('localhost', 'root', '', 'hs902_swerve_login');
-//$conn = new mysqli('localhost', $dbusername, $dbpassword, 'hs902_swerve_login');
 
-if($conn->connect_error) {
-    die('Connection failed: '.$conn->connect_error);
+if ($conn->connect_error) {
+    die('Connection failed: ' . $conn->connect_error);
 } else {
-    if(empty($accountType)) {
+    if (empty($accountType)) {
         header("Location: signup.php?firstname=$firstname&&lastname=$lastname&&username=$username&&email=$email&&accountTypeError=$accountTypeEmpty");
-    }
-    else if(empty($firstname)) {
+    } else if (empty($firstname)) {
         header("Location: signup.php?accountType=$accountType&&firstname=$firstname&&lastname=$lastname&&username=$username&&email=$email&&firstnameError=$firstnameEmpty");
-    }
-    else if(empty($lastname)) {
+    } else if (empty($lastname)) {
         header("Location: signup.php?accountType=$accountType&&firstname=$firstname&&lastname=$lastname&&username=$username&&email=$email&&lastnameError=$lastnameEmpty");
-    }
-    else if(empty($username)) {
+    } else if (empty($username)) {
         header("Location: signup.php?accountType=$accountType&&firstname=$firstname&&lastname=$lastname&&username=$username&&email=$email&&usernameError=$usernameEmpty");
-    }
-    else if(empty($email)) {
+    } else if (empty($email)) {
         header("Location: signup.php?accountType=$accountType&&firstname=$firstname&&lastname=$lastname&&username=$username&&email=$email&&emailError=$emailEmpty");
-    }
-    else if(preg_match('/[@]/', $email)) {
-        if(preg_match('/[.]/', $email)) {
-            if(preg_match('/com/', $email)) {
-                if(empty($password)) {
-                    header("Location: signup.php?accountType=$accountType&&firstname=accountType=$accountType&&$firstname&&lastname=$lastname&&username=$username&&email=$email&&passwordError=$passwordEmpty");
-                }
-                else if(!preg_match('/[A-Z]/', $password) || !preg_match('/[0-9]/', $password) || !preg_match('/[@$*.&_]/', $password) || strlen($password) < 8){
-                    header("Location: signup.php?accountType=$accountType&&firstname=$firstname&&lastname=$lastname&&username=$username&&email=$email&&pwCondition1=$pwCondition1&&pwCondition2=$pwCondition2&&pwCondition3=$pwCondition3&&pwCondition4=$pwCondition4");
-                } else {
-                    if(empty($confirmPassword)) {
-                        header("Location: signup.php?accountType=$accountType&&firstname=$firstname&&lastname=$lastname&&username=$username&&email=$email&&password=$password&&confirmPasswordError=$confirmPasswordEmpty");
-                    } else {
-                        if($confirmPassword !== $password) {
-                            header("Location: signup.php?accountType=$accountType&&firstname=$firstname&&lastname=$lastname&&username=$username&&email=$email&&password=$password&&confirmPasswordError=$confirmPasswordNo");
-                        } else {
-                            if(empty($gender)) {
-                                header("Location: signup.php?accountType=$accountType&&firstname=$firstname&&lastname=$lastname&&username=$username&&email=$email&&genderError=$genderEmpty");
-                            } else {
-                                $stmt = $conn->prepare("INSERT INTO users(account, firstname, lastname, gender, username, email, password) VALUES(?, ?, ?, ?, ?, ?, ?)");
-                                $stmt->bind_param('sssssss', $accountType, $firstname, $lastname, $gender, $username, $email, $password);
-                                $stmt->execute();
-                                header("Location: index.html?welcome $firstname");
-                            }
-                        }
-                    }
-                }
-            } else {
-                header("Location: signup.php?accountType=$accountType&&firstname=$firstname&&lastname=$lastname&&username=$username&&email=$email&&emailError=$emailCheck");
-            }
-        } else {
-            header("Location: signup.php?accountType=$accountType&&firstname=$firstname&&lastname=$lastname&&username=$username&&email=$email&&emailError=$emailCheck");
-        }
-    }
-    else if(!preg_match('/[@]/', $email)) {
-        if(empty($password)) {
-            header("Location: signup.php?accountType=$accountType&&firstname=$firstname&&lastname=$lastname&&username=$username&&email=$email&&passwordError=$passwordEmpty");
-        }
-        else if(!preg_match('/[A-Z]/', $password) || !preg_match('/[0-9]/', $password) || !preg_match('/[@$*.&_]/', $password) || strlen($password) < 8){
-            header("Location: signup.php?accountType=$accountType&&firstname=$firstname&&lastname=$lastname&&username=$username&&email=$email&&pwCondition1=$pwCondition1&&pwCondition2=$pwCondition2&&pwCondition3=$pwCondition3&&pwCondition4=$pwCondition4");
-        } else {
-            $stmt = $conn->prepare("INSERT INTO users(account, firstname, lastname, gender, username, email, password) VALUES(?, ?, ?, ?, ?, ?, ?)");
-            $stmt->bind_param('sssssss', $accountType, $firstname, $lastname, $gender, $username, $email, $password);
-            $stmt->execute();
-            header("Location: index.html?welcome $firstname");
-        }
+    } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        header("Location: signup.php?accountType=$accountType&&firstname=$firstname&&lastname=$lastname&&username=$username&&email=$email&&emailError=$emailCheck");
+        exit();
+    } else if (empty($password)) {
+        header("Location: signup.php?accountType=$accountType&&firstname=$firstname&&lastname=$lastname&&username=$username&&email=$email&&passwordError=$passwordEmpty");
+        exit();
+    } else if (!preg_match('/[A-Z]/', $password) || !preg_match('/[0-9]/', $password) || !preg_match('/[@$*.&_]/', $password) || strlen($password) < 8) {
+        header("Location: signup.php?accountType=$accountType&&firstname=$firstname&&lastname=$lastname&&username=$username&&email=$email&&pwCondition1=$pwCondition1&&pwCondition2=$pwCondition2&&pwCondition3=$pwCondition3&&pwCondition4=$pwCondition4");
+        exit();
+    } else if (empty($confirmPassword)) {
+        header("Location: signup.php?accountType=$accountType&&firstname=$firstname&&lastname=$lastname&&username=$username&&email=$email&&confirmPasswordError=$confirmPasswordEmpty");
+        exit();
+    } else if ($confirmPassword !== $password) {
+        header("Location: signup.php?accountType=$accountType&&firstname=$firstname&&lastname=$lastname&&username=$username&&email=$email&&confirmPasswordError=$confirmPasswordNo");
+        exit();
+    } else if (empty($gender)) {
+        header("Location: signup.php?accountType=$accountType&&firstname=$firstname&&lastname=$lastname&&username=$username&&email=$email&&genderError=$genderEmpty");
+        exit();
+    } else {
+        $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+
+        $stmt = $conn->prepare("INSERT INTO users(account, firstname, lastname, gender, username, email, password) VALUES(?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param('sssssss', $accountType, $firstname, $lastname, $gender, $username, $email, $passwordHash);
+        $stmt->execute();
+
+        header("Location: index.html?welcome=" . urlencode($firstname));
+        exit();
     }
 }
 include("signup.php");
