@@ -1,10 +1,9 @@
 <?php
 ob_start();
-$dbusername = "hs902_hamzasalahuddin";
-$dbpassword = "j1Wsm]JYw*nB";
+session_start();
 
-$username = $_POST["username"];
-$password = $_POST["password"];
+$username = trim($_POST["username"] ?? "");
+$password = $_POST["password"] ?? "";
 
 $usernameEmpty = "Please enter a username/@ email";
 $usernameLength = "Username\email must be between 8 and 50 characters";
@@ -20,35 +19,44 @@ $accountNotRegistered = 'Account does not exist, <a href="signup.php" id="create
 $invalidPassword = "Invalid password";
 
 $conn = new mysqli('localhost', 'root', '', 'hs902_swerve_login');
-//$conn = new mysqli('localhost', $dbusername, $dbpassword, 'hs902_swerve_login');
 
-if($conn->connect_error) {
-    die('Connection failed: '.$conn->connect_error);
+if ($conn->connect_error) {
+    die('Connection failed: ' . $conn->connect_error);
 } else {
-    if(empty($username)) {
-        header("Location: login.php?usernameError=$usernameEmpty");
+    if (empty($username) && empty($password)) {
+        header("Location: login.php?error=" . urlencode($allEmpty));
+        exit();
+    } else if (empty($username)) {
+        header("Location: login.php?usernameError=" . urlencode($usernameEmpty));
+        exit();
+    } else if (empty($password)) {
+        header("Location: login.php?username=" . urlencode($username) . "&&passwordError=" . urlencode($passwordEmpty));
+        exit();
     } else {
-        if(empty($password)) {
-            header("Location: login.php?username=$username&&passwordError=$passwordEmpty");
+        $stmt = $conn->prepare("SELECT id, username, email, firstname, password FROM users WHERE username = ? OR email = ? LIMIT 1");
+        $stmt->bind_param('ss', $username, $username);
+        $stmt->execute();
+
+        $result = $stmt->get_result();
+
+        if ($result->num_rows === 0) {
+            header("Location: login.php?username=" . urlencode($username) . "&&error=" . urlencode($accountNotRegistered));
+            exit();
+        }
+
+        $user = $result->fetch_assoc();
+
+        if (password_verify($password, $user['password'])) {
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['username'] = $user['username'];
+            $_SESSION['firstname'] = $user['firstname'];
+
+            header("Location: index.php");
+            exit();
         } else {
-            $encrypt = password_hash($password, PASSWORD_DEFAULT);
-            $query1 = "SELECT * from users WHERE username='$username' OR email='$username'";
-            $query2 = "SELECT * from users WHERE password='$password'";
-            $result1 = mysqli_query($conn, $query1);
-            $result2 = mysqli_query($conn, $query2);
-            $count1 = mysqli_num_rows($result1);
-            $count2 = mysqli_num_rows($result2);
-            if($count1 > 0) {
-                if($count2 > 0) {
-                    header("Location: index.html?welcome_back");
-                } else {
-                    header("Location: login.php?username=$username&&error=$invalidPassword");
-                }
-            } else {
-                header("Location: login.php?username=$username&&error=$accountNotRegistered");
-            }
+            header("Location: login.php?username=" . urlencode($username) . "&&error=" . urlencode($invalidPassword));
+            exit();
         }
     }
 }
-include("login.php");
 ?>

@@ -68,9 +68,9 @@ if ($conn->connect_error) {
         $stmt->bind_param('sssssss', $accountType, $firstname, $lastname, $gender, $username, $email, $passwordHash);
         $stmt->execute();
 
-        header("Location: index.html?welcome=" . urlencode($firstname));
+        header("Location: index.php?signup=success");
         exit();
     }
 }
-include("signup.php");
+include("signup.php?");
 ?>

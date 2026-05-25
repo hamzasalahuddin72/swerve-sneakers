@@ -28,7 +28,7 @@
                 <div class="middle">
 
                     <div class="logo">
-                        <a href="index.html">SWERVE</a>
+                        <a href="index.php">SWERVE</a>
                     </div>
 
                     <div class="navbtns">
