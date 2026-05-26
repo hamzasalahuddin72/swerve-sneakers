@@ -94,3 +94,108 @@ h2, h3, h4, h5 {
         padding: 0px;
     }
 }
+
+.catalogue-message {
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    padding: 40px 20px;
+}
+
+html,
+body {
+    min-height: 100%;
+    margin: 0;
+}
+
+body.sneakers-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
+    background: linear-gradient(
+        115deg,
+        #ed1c24 0%,
+        #ed1c24 14%,
+        #f3f3f3 14%,
+        #f3f3f3 86%,
+        #000000 86%,
+        #000000 100%
+    );
+}
+
+/* keep all page content above the abstract background */
+body.sneakers-page > * {
+    position: relative;
+    z-index: 1;
+}
+
+body.sneakers-page header {
+    flex: 0 0 auto;
+}
+
+body.sneakers-page #sneaker-catalogue {
+    flex: 1 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 18px 5vw 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    align-content: start;
+
+    /* important: make product area transparent */
+    background: transparent;
+}
+
+body.sneakers-page #sneaker-catalogue .div {
+    width: 100%;
+    min-width: 0;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+body.sneakers-page #sneaker-catalogue .image-frame {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #ffffff;
+}
+
+body.sneakers-page #sneaker-catalogue .sneaker-details {
+    min-height: 72px;
+    padding: 8px 10px;
+    box-sizing: border-box;
+    background: #ffffff;
+}
+
+body.sneakers-page footer {
+    flex: 0 0 auto;
+    width: 100%;
+    margin-top: auto;
+    position: static;
+    background: #000000;
+    padding: 16px 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body.sneakers-page footer a {
+    color: #ffffff;
+}
+
+.catalogue-card-hidden {
+    display: none !important;
+}
+
+.catalogue-message {
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    padding: 40px 20px;
+    color: #ffffff;
+}

@@ -213,6 +213,153 @@ async function renderWorkingTrendingCards() {
   trendingContainer.innerHTML = workingProducts.map(buildTrendingCard).join("");
 }
 
+function getBackgroundImageUrl(element) {
+    const backgroundImage = element.style.backgroundImage;
+    const match = backgroundImage.match(/url\(["']?(.*?)["']?\)/);
+
+    return match ? match[1] : "";
+}
+
+function checkImageLoads(url) {
+    return new Promise((resolve) => {
+        if (!url) {
+            resolve(false);
+            return;
+        }
+
+        const img = new Image();
+
+        img.onload = function () {
+            resolve(true);
+        };
+
+        img.onerror = function () {
+            resolve(false);
+        };
+
+        img.src = url;
+    });
+}
+
+function getCatalogueCardLimit() {
+    const catalogue = document.getElementById("sneaker-catalogue");
+
+    if (!catalogue) {
+        return 12;
+    }
+
+    const validCards = catalogue.querySelectorAll(".div:not(.catalogue-card-broken)");
+
+    if (validCards.length === 0) {
+        return 12;
+    }
+
+    const firstCard = validCards[0];
+    const cardHeight = firstCard.offsetHeight || 240;
+
+    const headerHeight = document.querySelector("header")?.offsetHeight || 0;
+    const footerHeight = document.querySelector("footer")?.offsetHeight || 0;
+
+    const availableHeight = window.innerHeight - headerHeight - footerHeight - 48;
+    const rows = Math.max(2, Math.floor(availableHeight / cardHeight));
+
+    const computedStyle = window.getComputedStyle(catalogue);
+    const columns = computedStyle.gridTemplateColumns.split(" ").filter(Boolean).length || 1;
+
+    return Math.max(columns * rows, columns * 2);
+}
+
+function applyCatalogueCardLimit() {
+    const catalogue = document.getElementById("sneaker-catalogue");
+
+    if (!catalogue) {
+        return;
+    }
+
+    const limit = getCatalogueCardLimit();
+    const validCards = Array.from(
+        catalogue.querySelectorAll(".div:not(.catalogue-card-broken)")
+    );
+
+    validCards.forEach((card, index) => {
+        card.classList.toggle("catalogue-card-hidden", index >= limit);
+    });
+}
+
+async function prepareCatalogueCards() {
+    const catalogue = document.getElementById("sneaker-catalogue");
+
+    if (!catalogue) {
+        return;
+    }
+
+    const cards = Array.from(catalogue.querySelectorAll(".div"));
+
+    for (const card of cards) {
+        const imageFrame = card.querySelector(".image-frame");
+        const imageUrl = imageFrame ? getBackgroundImageUrl(imageFrame) : "";
+        const imageWorks = await checkImageLoads(imageUrl);
+
+        if (!imageWorks) {
+            card.classList.add("catalogue-card-broken");
+            card.remove();
+        }
+    }
+
+    applyCatalogueCardLimit();
+}
+
+let catalogueResizeTimer;
+
+window.addEventListener("resize", function () {
+    clearTimeout(catalogueResizeTimer);
+
+    catalogueResizeTimer = setTimeout(function () {
+        applyCatalogueCardLimit();
+    }, 150);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    prepareCatalogueCards();
+});
+
+async function keepFirstWorkingCatalogueCards(limit = 12) {
+    const catalogueContainer = document.getElementById("sneaker-catalogue");
+
+    if (!catalogueContainer) {
+        return;
+    }
+
+    const cards = Array.from(catalogueContainer.querySelectorAll(".div"));
+
+    let workingCardCount = 0;
+
+    for (const card of cards) {
+        const imageFrame = card.querySelector(".image-frame");
+        const imageUrl = imageFrame ? getBackgroundImageUrl(imageFrame) : "";
+        const isWorkingImage = await checkImageLoads(imageUrl);
+
+        if (!isWorkingImage) {
+            card.remove();
+            continue;
+        }
+
+        workingCardCount++;
+
+        if (workingCardCount > limit) {
+            card.remove();
+        }
+    }
+
+    if (workingCardCount === 0) {
+        catalogueContainer.innerHTML = '<p class="catalogue-message">No sneaker images are available right now.</p>';
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    keepFirstWorkingCatalogueCards(12);
+});
+
 document.addEventListener("DOMContentLoaded", renderWorkingTrendingCards);
 
 const welcomeTimeout = setTimeout(welcomePopup, 2000);
