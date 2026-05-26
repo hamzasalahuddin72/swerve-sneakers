@@ -1,0 +1,21 @@
+CREATE DATABASE IF NOT EXISTS hs902_swerve_login
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_unicode_ci;
+
+USE hs902_swerve_login;
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+
+    account VARCHAR(50) NOT NULL,
+    firstname VARCHAR(100) NOT NULL,
+    lastname VARCHAR(100) NOT NULL,
+    gender VARCHAR(50) NOT NULL,
+
+    username VARCHAR(100) NOT NULL UNIQUE,
+    email VARCHAR(255) NOT NULL UNIQUE,
+
+    password VARCHAR(255) NOT NULL,
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
