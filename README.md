@@ -61,6 +61,12 @@ Login page used to authenticate registered users through the PHP backend.
 
 Session-based navigation state where the homepage changes from Login to Welcome/Logout after successful authentication.
 
+### Sneaker Catalogue
+
+![Sneaker catalogue](docs/screenshots/sneaker-catalogue.jpeg)
+
+Sneaker browsing page showing product data retrieved through the sneaker API integration.
+
 ### Product Detail / Rental Flow
 
 ![Product detail page](docs/screenshots/product-page.jpeg)
