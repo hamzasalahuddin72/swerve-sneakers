@@ -39,31 +39,31 @@ The project is not a production ecommerce platform, but it demonstrates a comple
 
 ### Homepage
 
-![SWERVE homepage](docs/screenshots/homepage.jpg)
+![SWERVE homepage](docs/screenshots/homepage.jpeg)
 
 Landing page showing the SWERVE sneaker rental concept, navigation, brand-focused design and trending product cards.
 
 ### Signup Page
 
-![Signup page](docs/screenshots/signup-page.jpg)
+![Signup page](docs/screenshots/signup-page.jpeg)
 
 Signup page connected to the local MySQL database, with server-side validation and hashed password storage.
 
 ### Login Page
 
-![Login page](docs/screenshots/login-page.jpg)
+![Login page](docs/screenshots/login-page.jpeg)
 
 Login page used to authenticate registered users through the PHP backend.
 
 ### Logged-In Session
 
-![Logged-in session](docs/screenshots/logged-in-session.jpg)
+![Logged-in session](docs/screenshots/logged-in-session.jpeg)
 
 Session-based navigation state where the homepage changes from Login to Welcome/Logout after successful authentication.
 
 ### Product Detail / Rental Flow
 
-![Product detail page](docs/screenshots/product-page.jpg)
+![Product detail page](docs/screenshots/product-page.jpeg)
 
 Product detail page supporting the rental-focused user journey.
 
